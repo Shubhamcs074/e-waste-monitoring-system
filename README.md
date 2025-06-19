@@ -105,3 +105,19 @@ Use **Chart.js** or Recharts to show:
 - Backend: Render or Railway
 
 - Database: PostgreSQL on ElephantSQL or MongoDB Atlas
+----
+
+# lets start from Frontend
+### Frontend Development Plan (React.js)
+
+| Page                   | Description                                 |
+| ---------------------- | ------------------------------------------- |
+| **Login & Register**   | Role-based auth UI (User, Recycler, Admin)  |
+| **User Dashboard**     | Add/view devices, raise collection requests |
+| **Recycler Dashboard** | View and manage assigned pickup requests    |
+| **Admin Dashboard**    | Manage users, recyclers, and view stats     |
+| **Device Form**        | Add a new device                            |
+| **Request Form**       | Raise a new e-waste pickup request          |
+| **Awareness Page**     | Info on responsible e-waste handling        |
+| **Header/Navbar**      | Navigation between dashboards based on role |
+
