@@ -1,0 +1,104 @@
+/* GLOBAL STYLES */
+body {
+  background-color: #0e0e1a;
+  color: #eaeaea;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 32px;
+  color: #00e0ff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #ffd54f;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* DASHBOARD CONTAINER */
+.dashboard-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #1a1a2e;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
+  animation: fadeIn 0.5s ease;
+}
+
+/* LIST ITEMS */
+.dashboard-container li {
+  background: #151528;
+  margin: 12px 0;
+  padding: 16px 20px;
+  border-left: 5px solid #00e0ff;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.dashboard-container li:hover {
+  transform: translateY(-3px);
+  background-color: #202040;
+}
+
+.dashboard-container li strong {
+  color: #ffffff;
+}
+
+/* BUTTONS */
+.dashboard-container button {
+  background-color: #00e0ff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-container button:hover {
+  background-color: #00b8cc;
+}
+
+/* SELECT DROPDOWN */
+.dashboard-container select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #181830;
+  color: #fff;
+  margin-top: 8px;
+}
+
+/* KEY METRICS */
+.dashboard-container section ul li {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-left: 3px solid #00e0ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility Classes */
+.text-success {
+  color: #4caf50;
+}
+
+.text-warning {
+  color: #ffc107;push
+}
