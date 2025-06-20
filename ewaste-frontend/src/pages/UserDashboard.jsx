@@ -13,7 +13,9 @@ const UserDashboard = () => {
   return (
     <>
       {/* Navbar/Header at the top */}
+      
       <Header role="user" />
+      
 
       {/* Main dashboard content */}
       <div className="dashboard-container">

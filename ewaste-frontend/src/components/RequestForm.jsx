@@ -10,7 +10,7 @@ const RequestForm = ({ deviceId }) => {
   };
 
   return (
-    <button onClick={handleRequest} disabled={submitted}>
+    <button class="styleit" onClick={handleRequest} disabled={submitted}>
       {submitted ? "Requested" : "Raise Collection Request"}
     </button>
   );
