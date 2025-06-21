@@ -123,9 +123,10 @@ Use **Chart.js** or Recharts to show:
 | **Header/Navbar**      | Navigation between dashboards based on role |
 
 
-----
+---
 
 ##🛠️ Backend Build Plan:
+
 ###Here’s what we’ll do next, together:
 
 ***1. [✔] Project & app setup***
@@ -144,4 +145,4 @@ Use **Chart.js** or Recharts to show:
 
 ***8. [ ] Connect React frontend to APIs***
 
-----
+---
