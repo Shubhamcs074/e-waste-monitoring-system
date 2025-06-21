@@ -123,5 +123,25 @@ Use **Chart.js** or Recharts to show:
 | **Header/Navbar**      | Navigation between dashboards based on role |
 
 
-=======
+----
+
+##🛠️ Backend Build Plan:
+###Here’s what we’ll do next, together:
+
+***1. [✔] Project & app setup***
+
+***2. [🔜] Configure CORS, REST, JWT***
+
+***3. [ ] Create Models (UserProfile, Device, PickupRequest)***
+
+***4. [ ] Create Serializers***
+
+***5. [ ] Build Views & Permissions***
+
+***6. [ ] Set up API Routes***
+
+***7. [ ] Test endpoints with Postman***
+
+***8. [ ] Connect React frontend to APIs***
+
 ----
