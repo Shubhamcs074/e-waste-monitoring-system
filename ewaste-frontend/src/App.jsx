@@ -5,6 +5,7 @@ import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import RecyclerDashboard from './pages/RecyclerDashboard';
 import Awareness from './pages/Awareness';
+import AdminAnalytics from './pages/AdminAnalytics';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/user" element={<UserDashboard />} />
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/recycler" element={<RecyclerDashboard />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/analytics" element={<AdminAnalytics />} />
+        <Route path="/recycler/dashboard" element={<RecyclerDashboard />} />
         <Route path="/awareness" element={<Awareness />} />
       </Routes>
     </Router>

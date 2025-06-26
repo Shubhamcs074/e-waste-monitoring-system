@@ -1,88 +1,67 @@
 .dashboard-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 40px auto;
-  padding: 30px;
+  padding: 35px;
   background: #ffffff;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .dashboard-container h2 {
   text-align: center;
-  font-size: 30px;
-  margin-bottom: 25px;
+  font-size: 32px;
+  margin-bottom: 30px;
   color: #1e293b;
 }
 
 .dashboard-container h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #3b3b3b;
+  font-size: 24px;
+  margin: 25px 0 15px;
+  color: #334155;
 }
 
-.device-item {
-  color: #2d0558;
-  background-color: #f3f3f3;
-  padding: 14px 20px;
+.dashboard-container ul li {
+  color: #1e1e1e;
+  font-weight: 500;
   margin-bottom: 12px;
-  border-left: 5px solid #3b82f6;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.3s;
-}
-
-.device-item:hover {
-  background-color: #f1f5f9;
-}
-
-.device-status {
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-left: 10px;
-  text-transform: capitalize;
-  font-size: 0.9rem;
-}
-
-.device-status.active {
-  background-color: #159334;
-  color: #ffffff;
-}
-
-.device-status.obsolete {
-  background-color: #e21010;
-  color: #ffffff;
 }
 
 form {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 form input[type="text"],
+form input[type="date"],
 form select {
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e0;
-  font-size: 0.95rem;
-  width: 180px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  width: 220px;
+  background: #f8fafc;
 }
 
 form button {
-  padding: 10px 16px;
+  padding: 12px 20px;
   background-color: #3b82f6;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 0.95rem;
   transition: background 0.3s;
 }
 
@@ -99,16 +78,99 @@ hr {
   border: none;
   height: 1px;
   background: #e2e8f0;
-  margin: 30px 0;
+  margin: 35px 0;
 }
 
-.styleit {
-  padding: 10px 16px;
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status-active {
+  background-color: #159334;
+  color: #ffffff;
+}
+
+.status-obsolete {
+  background-color: #e21010;
+  color: #ffffff;
+}
+
+.status-pending {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.status-approved {
+  background-color: #10b981;
+  color: white;
+}
+
+.pickup-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.pickup-table th, .pickup-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.pickup-table th {
+  background-color: #e2e8f0;
+  font-weight: 600;
+}
+
+.pickup-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+form select {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background: #f8fafc;
+}
+
+.status-in-progress {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.status-completed {
+  background-color: #10b981;
+  color: white;
+}
+.status-badge.assigned { background-color: orange; }
+.status-badge.picked { background-color: yellow; }
+.status-badge.recycled { background-color: green; }
+
+
+.status-badge.pending {
+  background-color: #fbbf24;
+  color: white;
+}
+
+.status-badge.in-progress {
   background-color: #3b82f6;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
 }
+
+.status-badge.completed {
+  background-color: #10b981;
+  color: white;
+}
+

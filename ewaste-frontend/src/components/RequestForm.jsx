@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import api from '../api';
 
 const RequestForm = ({ deviceId }) => {
-  const [submitted, setSubmitted] = useState(false);
+  const handleRequest = async () => {
+  try {
+    await api.post('/user/requests/', { device: deviceId });
+    alert('Pickup requested!');
+  } catch (error) {
+    console.error("Pickup request failed:", error);
+    alert('Failed to request pickup');
+  }
+};
 
-  const handleRequest = () => {
-    // Simulate request submission
-    alert(`Collection request raised for device ID: ${deviceId}`);
-    setSubmitted(true);
-  };
-
-  return (
-    <button class="styleit" onClick={handleRequest} disabled={submitted}>
-      {submitted ? "Requested" : "Raise Collection Request"}
-    </button>
-  );
+  return <button onClick={handleRequest}>Request Pickup</button>;
 };
 
 export default RequestForm;

@@ -1,8 +1,10 @@
 import React from 'react';
 import './awareness.css'; // optional styling
+import Header from '../components/Header';
 
 const Awareness = () => {
-  return (
+  return (<>
+    <Header/>
     <div className="awareness-container">
       <h2>♻️ E-Waste Awareness</h2>
 
@@ -44,6 +46,7 @@ const Awareness = () => {
         </ul>
       </section>
     </div>
+    </>
   );
 };
 
