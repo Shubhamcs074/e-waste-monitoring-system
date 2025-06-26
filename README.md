@@ -1,148 +1,109 @@
-# ♻️ E-Waste Management System
+# ♻️ E-Waste Monitoring System
 
-A web-based software system designed to promote responsible electronic waste management.
-
----
-
-## ✅ Goal
-
-The system aims to:
-
-- Track electronic devices
-- Identify when devices become obsolete
-- Let users raise e-waste collection requests
-- Connect requests with certified recyclers
-- Display e-waste statistics to administrators
-- Promote responsible consumption
+An end-to-end web platform to track, assign, and manage e-waste collection, built using **Django REST API (backend)** and **React.js (frontend)**.
 
 ---
 
-## 🧩 Step-by-Step Guide
+## 📦 Tech Stack
+
+| Layer     | Technology                        |
+|-----------|-----------------------------------|
+| Frontend  | React.js, Tailwind CSS, Axios     |
+| Backend   | Django REST Framework             |
+| Database  | SQLite (for dev)                  |
+| Auth      | JWT Authentication                |
+| Hosting   | Local (Ready for Render/Vercel)   |
 
 ---
 
-### 🏗️ 1: Plan System Architecture
+## 🔑 Features
 
-#### ✅ Identify 3 User Roles
+### 👤 User
+- Register/Login
+- Add electronic devices
+- Raise pickup requests
+- View request status
 
-| Role       | Capabilities                                                   |
-|------------|----------------------------------------------------------------|
-| User/Org   | Register devices, raise pickup requests                        |
-| Recycler   | View assigned requests, mark as picked/recycled               |
-| Admin      | Add recyclers, assign them to requests, view statistics       |
+### 🛠 Recycler
+- Login & view assigned pickups
+- Update status: `pending → in-progress → completed`
 
----
-
-### 🗃️ 2: Design the Database
-
-Use **PostgreSQL** or **MongoDB** as your database.
-
-#### 🧾 Key Tables / Collections
-
-- **Users**:  
-  `id`, `name`, `email`, `password`, `role`
-
-- **Devices**:  
-  `id`, `user_id`, `name`, `purchase_date`, `status`, `location`
-
-- **Recyclers**:  
-  `id`, `name`, `service_radius_km`, `location`, `license_id`
-
-- **CollectionRequests**:  
-  `id`, `device_id`, `user_id`, `recycler_id`, `status`, `request_date`, `pickup_date`
+### 🛡️ Admin
+- View unassigned requests
+- Assign recyclers
+- View analytics dashboard:
+  - Total users
+  - Requests (pending/assigned/completed)
+  - Recyclers
 
 ---
 
-### 💻 3: Backend (Flask / Django)
+## 🚀 Running Locally
 
-#### 🔧 Features
+### 1. Clone the Repo
 
-Create RESTful APIs for:
+```bash
+git clone https://github.com/Shubhamcs074/e-waste-monitoring-system
+cd e-waste-monitoring-system
 
-- User authentication (register/login)
-- Add / view devices
-- Create / view collection requests
-- Assign recycler (auto or admin-based)
-- View dashboard statistics
+```
+---
+### 2. Backend Setup (/ewaste_backend/)
+
+```bash
+cd ewaste_backend
+python -m venv env
+env\Scripts\activate  # On Linux/Mac: source env/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+#### Django runs on: http://127.0.0.1:8000/
+---
+
+### 3. Frontend Setup (/ewaste-frontend/)
+```bash
+cd ewaste-frontend
+npm install
+npm start
+```
+#### React runs on: http://localhost:3000/
+---
+### 🔐 Roles & Test Users
+| Role     | Username   | Password |
+| -------- | ---------- | -------- |
+| Admin    | admin      | -------- |
+| Recycler | recycler01 | -------- |
+| User     | user01     | -------  |
+
+---
+### 📁 Folder Structure
+```
+e-waste-monitoring-system/
+├── ewaste_backend/          # Django REST API
+├── ewaste-frontend/         # React.js Frontend
+├── README.md
+└── .gitignore
+```
+---
+### 🌐 Future Enhancements
+Email notifications
+
+Google Maps for address
+
+Deployment to Render/Vercel
+
+Role-based dashboards with filters
 
 ---
 
-### 🎨 4: Frontend (React.js)
+### 📜 License
 
-#### 🖥️ Pages
+#### MIT © Shubham Saini
 
-- **User Dashboard**: Track registered devices, request pickup
-- **Recycler Dashboard**: View assigned collection requests
-- **Admin Dashboard**: View statistics, manage users/recyclers
-
----
-
-### 📍 5: Matching Recycler (Smart Assignment)
-
-Use the **Google Maps API** or a simple **Haversine formula** in Python to locate the nearest recycler:
-
----
-
-### 📊 6: Dashboard Analytics
-
-Use **Chart.js** or Recharts to show:
-
-- Total devices
-- E-waste generated
-- Requests completed/pending
-
----
-
-### 📬 7: Notifications
-- Use email (SendGrid or SMTP) to notify recycler on assignment
-
-- Show frontend alerts/notifications to users and admins
-
----
-### 🚀 8: Deploy the Project
-- Frontend: Vercel or Netlify
-
-- Backend: Render or Railway
-
-- Database: PostgreSQL on ElephantSQL or MongoDB Atlas
-<<<<<<< HEAD
-----
-
-# lets start from Frontend
-## Frontend Development Plan (React.js)
-
-| Page                   | Description                                 |
-| ---------------------- | ------------------------------------------- |
-| **Login & Register**   | Role-based auth UI (User, Recycler, Admin)  |
-| **User Dashboard**     | Add/view devices, raise collection requests |
-| **Recycler Dashboard** | View and manage assigned pickup requests    |
-| **Admin Dashboard**    | Manage users, recyclers, and view stats     |
-| **Device Form**        | Add a new device                            |
-| **Request Form**       | Raise a new e-waste pickup request          |
-| **Awareness Page**     | Info on responsible e-waste handling        |
-| **Header/Navbar**      | Navigation between dashboards based on role |
-
-
----
-
-##🛠️ Backend Build Plan:
-
-###Here’s what we’ll do next, together:
-
-***1. [✔] Project & app setup***
-
-***2. [🔜] Configure CORS, REST, JWT***
-
-***3. [ ] Create Models (UserProfile, Device, PickupRequest)***
-
-***4. [ ] Create Serializers***
-
-***5. [ ] Build Views & Permissions***
-
-***6. [ ] Set up API Routes***
-
-***7. [ ] Test endpoints with Postman***
-
-***8. [ ] Connect React frontend to APIs***
-
+```bash
+git add .gitignore README.md
+git commit -m "📘 Added README and .gitignore"
+git push origin main
+```
 ---
